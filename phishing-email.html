@@ -1,1 +1,178 @@
-<h1> Chúc mừng bạn đã bị lừa </h1>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cảnh Báo An Toàn Thông Tin</title>
+    <!-- Nhúng Font Inter hiện đại -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-hover: #b91c1c;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            max-width: 560px;
+            width: 100%;
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .icon-box {
+            background-color: #fee2e2;
+            color: var(--primary);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .icon-box svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .accent-text {
+            color: var(--primary);
+        }
+
+        .description {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .checklist {
+            text-align: left;
+            background-color: #f1f5f9;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .checklist-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .check-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-item::before {
+            content: "⚠️";
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Icon Cảnh Báo Nguy Hiểm -->
+        <div class="icon-box">
+            <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+        </div>
+
+        <!-- Tiêu Đề -->
+        <h1>Rất tiếc, bạn đã <span class="accent-text">sập bẫy</span> email giả lập!</h1>
+        
+        <!-- Mô Tả Ngắn -->
+        <p class="description">Đây không phải là một cuộc tấn công thật, mà là một kịch bản giả lập thuộc chương trình đào tạo nâng cao nhận thức an toàn thông tin nội bộ.</p>
+
+        <!-- Khối Check Các Điểm Đáng Ngờ -->
+        <div class="checklist">
+            <div class="checklist-title">Các dấu hiệu bạn đã bỏ sót:</div>
+            <div class="check-item"><strong>Địa chỉ người gửi:</strong> Tên hiển thị giống thật nhưng domain email bị giả mạo.</div>
+            <div class="check-item"><strong>Tính cấp bách giả tạo:</strong> Thúc ép bạn hành động nhanh để tránh hậu quả.</div>
+            <div class="check-item"><strong>Liên kết đáng ngờ:</strong> Đường dẫn thực tế khi rê chuột vào không khớp với text hiển thị.</div>
+        </div>
+
+        <!-- Nút Hành Động -->
+        <a href="#" class="btn" onclick="window.close(); return false;">Tôi đã hiểu và rút kinh nghiệm</a>
+
+        <!-- Footer Bảo Mật -->
+        <div class="footer">
+            Hệ Thống Phishing Simulator &copy; 2026
+        </div>
+    </div>
+
+</body>
+</html>
