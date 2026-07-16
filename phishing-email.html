@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cảnh Báo An Toàn Thông Tin</title>
-    <!-- Nhúng Font Inter hiện đại -->
+    <!-- Sửa lại link nhúng Font Inter chuẩn của Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
         :root {
@@ -39,7 +39,7 @@
             border-radius: 16px;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--border);
-            max-width: 560px;
+            max-width: 600px; /* Tăng nhẹ kích thước giúp text dàn ngang thoáng hơn */
             width: 100%;
             padding: 40px 32px;
             text-align: center;
@@ -85,53 +85,46 @@
             text-align: left;
             background-color: #f1f5f9;
             border-radius: 12px;
-            padding: 20px;
+            padding: 24px;
             margin-bottom: 32px;
         }
 
         .checklist-title {
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: var(--text-muted);
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
+        /* Chuyển sang Grid để chia cột cố định, chống nhảy chữ */
         .check-item {
-            display: flex;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: 24px 140px 1fr;
+            gap: 8px;
             font-size: 14px;
             color: var(--text-main);
-            margin-bottom: 10px;
-            line-height: 1.4;
+            margin-bottom: 16px;
+            line-height: 1.5;
+            align-items: start;
         }
 
         .check-item:last-child {
             margin-bottom: 0;
         }
 
-        .check-item::before {
-            content: "⚠️";
-            margin-right: 10px;
+        .check-icon {
             flex-shrink: 0;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 500;
-            transition: background-color 0.2s ease;
-            width: 100%;
+        .check-label {
+            font-weight: 700;
+            color: var(--text-main);
         }
 
-        .btn:hover {
-            background-color: var(--primary-hover);
+        .check-desc {
+            color: var(--text-main);
         }
 
         .footer {
@@ -157,15 +150,29 @@
         <!-- Mô Tả Ngắn -->
         <p class="description">Đây không phải là một cuộc tấn công thật, mà là một kịch bản giả lập thuộc chương trình đào tạo nâng cao nhận thức an toàn thông tin nội bộ.</p>
 
-        <!-- Khối Check Các Điểm Đáng Ngờ -->
+        <!-- Khối Check Các Điểm Đáng Ngờ (Đã sửa layout) -->
         <div class="checklist">
             <div class="checklist-title">Các dấu hiệu bạn đã bỏ sót:</div>
-            <div class="check-item"><strong>Địa chỉ người gửi:</strong> Tên hiển thị giống thật nhưng domain email bị giả mạo.</div>
-            <div class="check-item"><strong>Tính cấp bách giả tạo:</strong> Thúc ép bạn hành động nhanh để tránh hậu quả.</div>
-            <div class="check-item"><strong>Liên kết đáng ngờ:</strong> Đường dẫn thực tế khi rê chuột vào không khớp với text hiển thị.</div>
+            
+            <div class="check-item">
+                <span class="check-icon">⚠️</span>
+                <span class="check-label">Địa chỉ người gửi:</span>
+                <span class="check-desc">Tên hiển thị giống thật nhưng domain email bị giả mạo.</span>
+            </div>
+            
+            <div class="check-item">
+                <span class="check-icon">⚠️</span>
+                <span class="check-label">Tính cấp bách giả tạo:</span>
+                <span class="check-desc">Thúc ép bạn hành động nhanh để tránh hậu quả.</span>
+            </div>
+            
+            <div class="check-item">
+                <span class="check-icon">⚠️</span>
+                <span class="check-label">Liên kết đáng ngờ:</span>
+                <span class="check-desc">Đường dẫn thực tế khi rê chuột vào không khớp với text hiển thị.</span>
+            </div>
         </div>
 
-      
         <!-- Footer Bảo Mật -->
         <div class="footer">
             Hệ Thống VinSpace Phishing Simulator &copy; 2026
