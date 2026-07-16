@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cảnh Báo An Toàn Thông Tin</title>
-    <!-- Sửa lại link nhúng Font Inter chuẩn của Google Fonts -->
+    <!-- Nhúng Font Inter chuẩn -->
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
         :root {
@@ -39,9 +39,9 @@
             border-radius: 16px;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--border);
-            max-width: 600px; /* Tăng nhẹ kích thước giúp text dàn ngang thoáng hơn */
+            max-width: 720px; /* Đã tăng chiều rộng lên 720px để text dàn ngang đẹp hơn */
             width: 100%;
-            padding: 40px 32px;
+            padding: 48px 40px; /* Tăng padding để cân đối với chiều rộng mới */
             text-align: center;
         }
 
@@ -63,10 +63,10 @@
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 26px; /* Tăng nhẹ font chữ để nổi bật */
             font-weight: 700;
             color: var(--text-main);
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             line-height: 1.3;
         }
 
@@ -78,15 +78,15 @@
             font-size: 15px;
             color: var(--text-muted);
             line-height: 1.6;
-            margin-bottom: 32px;
+            margin-bottom: 36px;
         }
 
         .checklist {
             text-align: left;
             background-color: #f1f5f9;
             border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 32px;
+            padding: 28px;
+            margin-bottom: 36px;
         }
 
         .checklist-title {
@@ -95,15 +95,15 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: var(--text-muted);
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
-        /* Chuyển sang Grid để chia cột cố định, chống nhảy chữ */
+        /* Chia cột Grid rộng rãi hơn */
         .check-item {
             display: grid;
-            grid-template-columns: 24px 140px 1fr;
-            gap: 8px;
-            font-size: 14px;
+            grid-template-columns: 24px 160px 1fr; /* Tăng cột tiêu đề lên 160px để thoải mái khoảng trống */
+            gap: 12px;
+            font-size: 15px; /* Tăng font chữ hiển thị rõ ràng hơn */
             color: var(--text-main);
             margin-bottom: 16px;
             line-height: 1.5;
@@ -150,7 +150,7 @@
         <!-- Mô Tả Ngắn -->
         <p class="description">Đây không phải là một cuộc tấn công thật, mà là một kịch bản giả lập thuộc chương trình đào tạo nâng cao nhận thức an toàn thông tin nội bộ.</p>
 
-        <!-- Khối Check Các Điểm Đáng Ngờ (Đã sửa layout) -->
+        <!-- Khối Check Các Điểm Đáng Ngờ -->
         <div class="checklist">
             <div class="checklist-title">Các dấu hiệu bạn đã bỏ sót:</div>
             
